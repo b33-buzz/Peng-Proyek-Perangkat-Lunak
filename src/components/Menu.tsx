@@ -2,8 +2,11 @@ import Card from "@/components/ui/Card";
 
 const Menu = () => {
   return (
-    <div className="w-full min-h-screen flex flex-col items-center bg-[#E3FFE3]">
-      <div className="w-full flex justify-center pt-20">
+    <div
+      className="w-full min-h-screen flex flex-col items-center bg-[#E3FFE3]"
+      id="menu"
+    >
+      <div className="w-full flex justify-center pt-24">
         <h1 className="text-4xl font-bold text-[#238B45]">Menu Kami</h1>
       </div>
       {/* Food */}

@@ -2,7 +2,7 @@ import Carousel from "@/components/ui/Carousel";
 
 const About = () => {
   return (
-    <div className="w-full min-h-screen flex bg-[#E3FFE3]">
+    <div className="w-full min-h-screen flex bg-[#E3FFE3]" id="about">
       {/* Carousel on the left */}
       <div className="w-1/2 flex justify-center items-center">
         <Carousel />

@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 interface CardProps {
   imageSrc?: string;
   productName: string;
@@ -7,9 +9,11 @@ interface CardProps {
 const Card = ({ imageSrc, productName, price }: CardProps) => {
   return (
     <div className="w-64 h-64 p-4 border rounded-lg shadow-md flex flex-col justify-between bg-white relative">
-      <img
-        src={imageSrc}
+      <Image
+        src={imageSrc || "/images/placeholder.png"}
         alt={productName}
+        width={256}
+        height={256}
         className="w-full h-32 object-cover rounded-t-lg"
       />
       <div className="flex flex-col justify-between flex-grow p-2">
@@ -20,7 +24,7 @@ const Card = ({ imageSrc, productName, price }: CardProps) => {
           <p className="text-gray-700 mt-6">{price}</p>
         </div>
       </div>
-      <button className="absolute top-0 right-0 border border-gray-400 rounded-xl w-10 h-10 flex items-center justify-center bg-white">
+      <button className="absolute top-0 right-0 border border-gray-400 rounded-xl w-10 h-10 flex items-center justify-center bg-white text-3xl">
         +
       </button>
     </div>
